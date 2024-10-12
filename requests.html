@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Current Requests</title>
+		<style type="text/css">
+
+		body
+        {
+		    font-family: Comic Sans MS;
+			background-color: #4A0404;
+			height: 100%;
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+		.wrapper
+        {
+			
+			margin: 0 auto;
+			padding: 1px;
+			border: 5px;
+		}
+		.bg 
+		{
+			position: relative;
+			margin: 0px;
+			padding: 0px 0px 0px 0px;
+        }
+		.logo
+		{
+		    position: absolute;
+			color: white;
+			left:60px;
+			font-size: 18px;
+			letter-spacing: 2px;
+			margin-top: 10px;
+		}
+.nav
+{
+    overflow:hidden;
+    position:fixed;
+    list-style: none;
+    margin-top: 0px;
+	margin-left: 350px;
+}
+
+.nav ul {
+  display: inline;
+  text-align: center;
+  list-style: none;
+}
+
+.nav li {
+  float: right;
+  display: inline;
+  padding: 10px 0px 0px 0px;
+}
+
+.nav li a {
+  display: inline;
+  font-size: 18px;
+  text-align: center;
+  width:150px;
+  color: white;
+  padding: 10px 25px;
+  text-decoration: none;
+}
+
+.nav li a:hover:not(.active) {
+  border-bottom: 2px solid grey;
+}
+
+.nav .active {
+  border-bottom: 2px solid #fff;
+}
+
+footer
+{
+    clear: both;
+    width: auto;
+    height: 40px;
+    padding: 10px;
+    text-align: center;
+    color: white;
+	margin-top: 100%;
+    text-shadow: 0.1em 0.1em #333;
+}
+
+.heart-shape{
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  background-color: red;
+  left: 50px;
+  top: 14px;
+}
+.heart-shape:before,
+.heart-shape:after{
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  content: '';
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  background-color: red;;
+}
+.heart-shape:before{
+  bottom: 0px;
+  left: -8px;
+}
+.heart-shape:after{
+  top: -8px;
+  right: 0px;
+}
+
+</style>
+    </head>
+    <body>
+	<div class="wrapper">
+	<div class = "bg">
+	<a href="home.html">
+               <div class="heart-shape"></div>
+	<div class="logo" style="width:100px; height: 30px; font-family:Comic Sans MS;">DonorsMatter</div></a>
+                <ul class = "nav">
+				    <li><a href="contact.html">Contact Us</a></li>
+					<li><a href="login.html">Login</a></li>
+					<li><a class="active" href="requests.html">Current Requests</a></li>
+					<li><a href="patient.html">Request Blood</a></li>
+					<li><a href="search.html">Find Blood Donor</a></li>
+					<li><a href="donor.html">Donor Register</a></li>
+					<li><a href="aboutus.html">About us</a></li>
+                </ul>
+				</div>
+
+           <footer>
+                <p>All rights reserved</p>
+            </footer> 
+</div>
+    </body>
+</html>

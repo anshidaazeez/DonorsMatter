@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Login Page</title>
+<style type="text/css">
+
+		body
+        {
+		    font-family: Comic Sans MS;
+			background-image: url("./Images/poster9.jpg");
+			height: 100%;
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+		.wrapperrr
+        {
+			
+			margin: 0 auto;
+			padding: 1px;
+			border: 5px;
+		}
+		.bg 
+		{
+			position: relative;
+			margin: 0px;
+			padding: 0px 0px 0px 0px;
+        }
+		.logo
+		{
+		    position: absolute;
+			color: white;
+			left:60px;
+			font-size: 18px;
+			letter-spacing: 2px;
+			margin-top: 10px;
+		}
+.navgbar
+{
+    overflow:hidden;
+    position:fixed;
+    list-style: none;
+    margin-top: 0px;
+	margin-left: 350px;
+}
+
+.navgbar ul {
+  display: inline;
+  text-align: center;
+  list-style: none;
+}
+
+.navgbar li {
+  float: right;
+  display: inline;
+  padding: 10px 0px 0px 0px;
+}
+
+.navgbar li a {
+  display: inline;
+  font-size: 18px;
+  text-align: center;
+  width:150px;
+  color: white;
+  padding: 10px 25px;
+  text-decoration: none;
+}
+
+.navgbar li a:hover:not(.active) {
+  border-bottom: 2px solid grey;
+}
+
+.navgbar .active {
+  border-bottom: 2px solid #fff;
+}
+
+footer
+{
+    clear: both;
+    width: auto;
+    height: 40px;
+    padding: 10px;
+    text-align: center;
+    color: white;
+	margin-top: 90px;
+    text-shadow: 0.1em 0.1em #333;
+}
+
+
+.heart-shape{
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  background-color: red;
+  left: 50px;
+  top: 14px;
+}
+.heart-shape:before,
+.heart-shape:after{
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  content: '';
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  background-color: red;;
+}
+.heart-shape:before{
+  bottom: 0px;
+  left: -8px;
+}
+.heart-shape:after{
+  top: -8px;
+  right: 0px;
+}
+
+.login{  
+        background-color: rgb(0, 0, 0); /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.6); /* Black w/opacity/see-through */
+        width: 382px;  
+        overflow: hidden;  
+        margin: auto;
+        margin: 20 0 0 450px;  
+        padding: 50px 50px 50px 50px;  
+        border-radius: 15px;
+        text-align: center;		
+}  
+h2{  
+    text-align: center;  
+    color: white;    
+}  
+label{  
+    color: white;  
+    font-size: 17px;
+}  
+#Uname{  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;  
+}  
+#Pass{  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;
+    color: #4A0404;	
+      
+}  
+.log{  
+    width: 100px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 5px;  
+    padding-left: 7px;  
+    color: white;
+    background-color: #4A0404;	
+  
+  
+}  
+span{  
+    color: white;  
+    font-size: 17px;  
+}  
+
+
+
+</style>
+<script>
+function myFunction() {
+  var x = document.getElementById("myInput");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+</script>
+    </head>
+    <body>
+	<div class="wrapperrr">
+	<div class = "bg">
+	<a href="home.html">
+               <div class="heart-shape"></div>
+	<div class="logo" style="width:100px; height: 30px; font-family:Comic Sans MS;">DonorsMatter</div></a>
+                <ul class = "navgbar">
+				    <li><a href="contact.html">Contact Us</a></li>
+					<li><a class="active" href="login.html">Login</a></li>
+					<li><a href="requests.html">Current Requests</a></li>
+					<li><a href="patient.html">Request Blood</a></li>
+					<li><a href="search.html">Find Blood Donor</a></li>
+					<li><a href="donor.html">Donor Register</a></li>
+					<li><a href="aboutus.html">About us</a></li>
+                </ul>
+				</div><br><br><br><br>
+	  
+    <div class="login">   
+    <h2>Login Page</h2><br>
+    <form id="login" method="get" action="login.html">    
+        <label><b>User Name     
+        </b>    
+        </label>   
+        <input type="text" name="Uname" id="Uname" placeholder="Username">    
+        <br><br>    
+        <label><b>Password     
+        </b>    
+        </label>   
+        <input type="Password" name="Pass" id="Pass" placeholder="Password">    
+        <br><br>    
+        <button type="submit" class="log" id="login" value="Sign In">Sign In</button>		
+        <br><br>    
+        <input type="checkbox" id="check">    
+        <span>Remember me</span>    
+        <br><br>    
+        <a href="#" style="color: white; font-size:13px;">Forgot Password</a>    
+    </form>     
+</div>  
+<footer>
+                <p>All rights reserved</p>
+            </footer> 
+</div>
+</body>
+</html>

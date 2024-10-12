@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript">
+var citiesByState = {
+AndhraPradesh: [ "Achampet","Adilabad" , "Adoni" , "Alampur" , "Allagadda" , "Alur" , "Amalapuram" , "Amangallu" , "Anakapalle" ],
+ArunachalPradesh: [" Along "," Anini "," Anjaw "," Bameng "," Basar "," Changlang "," Chowkhem "," Daporizo "," Dibang Valley "," Dirang "],
+Assam: [" Abhayapuri "," Baithalangshu "," Barama "," Barpeta Road "," Bihupuria "," Bijni "," Bilasipara "," Bokajan "," Bokakhat "," Boko "],
+Bihar: [" Adhaura "," Amarpur "," Araria "," Areraj "," Arrah "," Arwal "," Aurangabad "," Bagaha "," Banka "," Banmankhi "," Barachakia "],
+Chattisgarh: [" Ambikapur "," Antagarh "," Arang "," Bacheli "," Bagbahera "," Bagicha "," Baikunthpur "," Balod "," Balodabazar "," Balrampur "],
+Delhi: [" Central Delhi "," East Delhi "," New Delhi "," North Delhi "," North East Delhi "," North West Delhi "," South Delhi "," South West Delhi "],
+Goa: [" Canacona "," Candolim "," Chinchinim "," Cortalim "," Goa "," Jua "," Madgaon "," Mahem "," Mapuca "," Marmagao "," Panji "," Ponda "],
+Gujarat: [" Ahmedabad "," Ahwa "," Amod "," Amreli "," Anand "," Anjar "," Ankaleshwar "," Babra "," Balasinor "," Banaskantha "," Bansada "],
+Haryana: [" Adampur Mandi "," Ambala "," Assandh "," Bahadurgarh "," Barara "," Barwala "," Bawal "," Bawanikhera "," Bhiwani "," Charkhidadri "],
+HimachalPradesh: [" Amb "," Arki "," Banjar "," Bharmour "," Bilaspur "," Chamba "," Churah "," Dalhousie "," Dehra Gopipur "," Hamirpur "],
+JammuandKashmir: [" Akhnoor "," Anantnag "," Badgam "," Bandipur "," Baramulla "," Basholi "," Bedarwah "," Budgam "," Doda "," Gulmarg "," Jammu "],
+Jharkhand: [" Bagodar "," Baharagora "," Balumath "," Barhi "," Barkagaon "," Barwadih "," Basia "," Bermo "," Bhandaria "," Bhawanathpur "],
+Karnataka: [" Afzalpur "," Ainapur "," Aland "," Alur "," Anekal "," Ankola "," Arsikere "," Athani "," Aurad "," Bableshwar "," Badami "," Bagalkot "],
+Kerala: [" Adimaly "," Adoor "," Agathy "," Alappuzha "," Alathur "," Alleppey "," Alwaye "," Amini "," Androth "," Attingal "," Badagara "," Bitra "],
+MadhyaPradesh: [" Agar "," Ajaigarh "," Alirajpur "," Amarpatan "," Amarwada "," Ambah "," Anuppur "," Arone "," Ashoknagar "," Ashta "," Atner "],
+Maharashtra: [" Achalpur "," Aheri "," Ahmednagar "," Ahmedpur "," Ajara "," Akkalkot "," Akola "," Akole "," Akot "," Alibagh "," Amagaon "],
+Manipur: [" Bishnupur "," Chakpikarong "," Chandel "," Chattrik "," Churachandpur "," Imphal "," Jiribam "," Kakching "," Kalapahar "," Mao "],
+Meghalaya: [" Amlaren "," Baghmara "," Cherrapunjee "," Dadengiri "," Garo Hills "," Jaintia Hills "," Jowai "," Khasi Hills "," Khliehriat "],
+Mizoram: [" Aizawl "," Champhai "," Demagiri "," Kolasib "," Lawngtlai "," Lunglei "," Mamit "," Saiha "," Serchhip"],
+Nagaland: [" Dimapur "," Jalukie "," Kiphire "," Kohima "," Mokokchung "," Mon "," Phek "," Tuensang "," Wokha "," Zunheboto "],
+Odisha: [" Anandapur "," Angul "," Anugul "," Aska "," Athgarh "," Athmallik "," Attabira "," Bagdihi "," Balangir "," Balasore "," Baleswar "],
+Punjab: [" Abohar "," Ajnala "," Amritsar "," Balachaur "," Barnala "," Batala "," Bathinda "," Chandigarh "," Dasua "," Dinanagar "," Faridkot "],
+Rajasthan: [" Abu Road "," Ahore "," Ajmer "," Aklera "," Alwar "," Amber "," Amet "," Anupgarh "," Asind "," Aspur "," Atru "," Bagidora "],
+Sikkim: [" Barmiak "," Be "," Bhurtuk "," Chhubakha "," Chidam "," Chubha "," Chumikteng "," Dentam "," Dikchu "," Dzongri "," Gangtok "],
+TamilNadu: [" Ambasamudram "," Anamali "," Arakandanallur "," Arantangi "," Aravakurichi "," Ariyalur "," Arkonam "," Arni "," Aruppukottai "],
+Tripura: [" Agartala "," Ambasa "," Bampurbari "," Belonia "," Dhalai "," Dharam Nagar "," Kailashahar "," Kamal Krishnabari "," Khopaiyapara "],
+UttarPradesh: [" Achhnera "," Agra "," Akbarpur "," Aliganj "," Aligarh "," Allahabad "," Ambedkar Nagar "," Amethi "," Amiliya "," Amroha "],
+Uttarakhand: [" Almora "," Bageshwar "," Bhatwari "," Chakrata "," Chamoli "," Champawat "," Dehradun "," Deoprayag "," Dharchula "," Dunda "],
+WestBengal: [" Adra "," Alipurduar "," Amlagora "," Arambagh "," Asansol "," Balurghat "," Bankura "," Bardhaman "," Basirhat "," Berhampur "]
+}
+
+function makeSubmenu(value) {
+if(value.length==0) document.getElementById("citySelect").innerHTML = "<option></option>";
+else {
+var citiesOptions = "";
+for(cityId in citiesByState[value]) {
+citiesOptions+="<option>"+citiesByState[value][cityId]+"</option>";
+}
+document.getElementById("citySelect").innerHTML = citiesOptions;
+}
+}
+function displaySelected() { var country = document.getElementById("countrySelect").value;
+var city = document.getElementById("citySelect").value;
+alert(country+"\n"+city);
+}
+function resetSelection() {
+document.getElementById("countrySelect").selectedIndex = 0;
+document.getElementById("citySelect").selectedIndex = 0;
+}
+</script>
+</head>
+<body onload="resetSelection()">
+<select id="countrySelect" onchange="makeSubmenu(this.value)">
+<option value="" disabled selected>Choose State</option>
+    <option>Andhra Pradesh</option>
+    <option>Arunachal Pradesh</option>
+    <option>Assam</option>
+    <option>Bihar</option>
+    <option>Chattisgarh</option>
+	<option>Delhi</option>
+    <option>Goa</option>
+    <option>Gujarat</option>
+    <option>Haryana</option>
+    <option>Himachal Pradesh</option>
+    <option>Jammu and Kashmir</option>
+    <option>Jharkhand</option>
+    <option>Karnataka</option>
+    <option>Kerala</option>
+    <option>Madhya Pradesh</option>
+    <option>Maharashtra</option>
+    <option>Manipur</option>
+    <option>Meghalaya</option>
+    <option>Mizoram</option>
+    <option>Nagaland</option>
+    <option>Odisha</option>
+    <option>Punjab</option>
+    <option>Rajasthan</option>
+    <option>Sikkim</option>
+    <option>Tamil Nadu</option>
+	<option>Tripura</option>
+    <option>Uttar Pradesh</option>
+    <option>Uttarakhand</option>
+    <option>West Bengal</option>
+</select>
+<select id="citySelect"  >
+<option value="" disabled selected>Choose City</option>
+<option></option>
+</select>
+<button onclick="displaySelected()">show selected</button>
+</body>
+</html>
+	

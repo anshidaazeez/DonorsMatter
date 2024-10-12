@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Donor Register</title>
+		<style type="text/css">
+
+		body
+        {
+		    font-family: Comic Sans MS;
+			background-color: #4A0404;
+			height: 100%;
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+		.wrapper
+        {
+			
+			margin: 0 auto;
+			padding: 1px;
+			border: 5px;
+		}
+		.bg 
+		{
+			position: relative;
+			margin: 0px;
+			padding: 0px 0px 0px 0px;
+        }
+		.logo
+		{
+		    position: absolute;
+			color: white;
+			left:60px;
+			font-size: 18px;
+			letter-spacing: 2px;
+			margin-top: 10px;
+		}
+.nav
+{
+    overflow:hidden;
+    position:fixed;
+    list-style: none;
+    margin-top: 10px;
+	margin-left: 350px;
+}
+.header {
+position:fixed;
+  height:50px;
+  width:1635px;
+  padding: 10px 16px;
+  background: #4A0404;
+  color: #4A0404;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.sticky + .bg {
+  padding-top: 102px;
+}
+.nav ul {
+  display: inline;
+  text-align: center;
+  list-style: none;
+  padding: 10px 0px 0px 0px;
+}
+
+.nav li {
+  float: right;
+  display: inline;
+}
+
+.nav li a {
+  display: inline;
+  font-size: 18px;
+  text-align: center;
+  width:150px;
+  color: white;
+  padding: 10px 25px;
+  text-decoration: none;
+}
+
+.active{
+border-bottom: 2px solid #fff;
+}
+
+.nav .active {
+  border-bottom: 2px solid #fff;
+}
+
+footer
+{
+    clear: both;
+    width: auto;
+    height: 40px;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    text-shadow: 0.1em 0.1em #333;
+}
+
+.wrapperreg{
+	font-family: Courier;
+	font-weight: bold;
+	width: 500px
+	height: 700px;
+	margin: 100px 0px 0px 0px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.registration_form{
+	background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/opacity/see-through */
+	padding: 50px;
+	border-radius: 5px;
+	width: 600px;
+	align-items: center;
+}
+
+.registration_form .title{
+	text-align: center;
+	font-size: 28px;
+	font-weight: bold;
+	color: #ebd0ce;
+	letter-spacing: 2px;
+	font-weight: 700;
+}
+
+.form_wrap{
+	margin-top: 35px;
+	margin: 0px 0px 0px 80px;
+}
+
+.form_wrap .input_wrap{
+	margin-bottom: 15px;
+}
+
+.form_wrap .input_wrap:last-child{
+	margin-bottom: 0;
+}
+
+.form_wrap .input_wrap label{
+	display: block;
+	margin-bottom: 5px;
+	margin: 15px 0px 5px 0px;
+	font: 
+	font-size: 20px;
+	color: white;
+}
+.form_wrap .input_wrap .passwordl{
+	display: block;
+	margin-bottom: 5px;
+	margin: 2px 0px 5px 150px;
+	font-size: 15px;
+	color: white;
+}
+
+.form_wrap  input[type="text"]{
+	text-align: center;
+	color: black;
+	font-size:15px;
+	width: 400px;
+	border-radius: 3px;
+	border: 1px solid #9597a6;
+	padding: 10px;
+	outline: none;
+}
+.form_wrap  input[type="date"]{
+	text-align: center;
+	color: black;
+	font-size:15px;
+	width: 400px;
+	border-radius: 3px;
+	border: 1px solid #9597a6;
+	padding: 10px;
+	outline: none;
+}
+.form_wrap  input[type="password"]{
+	text-align: center;
+	font-size:15px;
+	width: 400px;
+	border-radius: 3px;
+	border: 1px solid #9597a6;
+	padding: 10px;
+	outline: none;
+}
+.form_wrap  input[type="checkbox"]{
+	text-align: center;
+	color: black;
+	margin: 10px 0px 5px 0px;
+	font-size:15px;
+	width: 400px;
+	border-radius: 3px;
+	border: 1px solid #9597a6;
+	padding: 10px;
+	outline: none;
+	background-color:red;
+}
+
+::placeholder {
+  color: black;
+}
+.form_wrap .dropdownlist{
+	text-align: center;
+	color: black;
+	font-size:15px;
+	width: 422px;
+	border-radius: 3px;
+	border: 1px solid #9597a6;
+	padding: 10px;
+	outline: none;
+}
+
+.form_wrap  input[type="text"]:focus{
+	border-color: pink;
+}
+
+.form_wrap .submit_btn{
+	width: 150px;
+	color: white;
+	font-size: 15px;
+	margin: 30px 0px 5px 140px;
+	background: #4A0404;
+	padding: 10px;
+	border: 0;
+	border-radius: 3px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	cursor: pointer;
+}
+
+.form_wrap .submit_btn:hover{
+	background: black;
+}
+
+.heart-shape{
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  background-color: red;
+  left: 50px;
+  top: 14px;
+}
+.heart-shape:before,
+.heart-shape:after{
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  content: '';
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  background-color: red;;
+}
+.heart-shape:before{
+  bottom: 0px;
+  left: -8px;
+}
+.heart-shape:after{
+  top: -8px;
+  right: 0px;
+}
+
+
+</style>
+<script>
+function myFunction() {
+  var x = document.getElementById("myInput");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+function SubmitFunction()
+{
+  alert("Thankyou for registering as a Donor.....We will let you know when and where to visit for Blood Donation!! TAKE CARE... and kindly check the Eligibilty Criteria provided in About Us!! ");
+}
+</script>
+<script>
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
+    </head>
+    <body>
+	<div class="wrapper">
+	<div class = "bg">
+	<a href="home.html">
+	<div class="header" id="myHeader">
+              <div class="heart-shape"></div>
+	<div class="logo" style="width:100px; height: 30px; font-family:Comic Sans MS;">DonorsMatter</div></a>
+                <ul class = "nav">
+				    <li><a href="contact.html">Contact Us</a></li>
+					<li><a href="login.html">Login</a></li>
+					<li><a href="requests.html">Current Requests</a></li>
+					<li><a href="patient.html">Request Blood</a></li>
+					<li><a href="search.html">Find Blood Donor</a></li>
+					<li class="active"><a href="donor.html">Donor Register</a></li>
+					<li><a href="aboutus.html">About us</a></li>
+                </ul>
+				</div>
+				</div>
+				</div>
+				<div class="wrapperreg">
+				<div class="registration_form">
+				<form action="donor.html" id="DonorForm" onsubmit="SubmitFunction()" method="post">
+      <div class="title"> Register as a DONOR </div>
+      <div class="form_wrap">
+      <div class="input_wrap">
+      <table>
+        <tbody><tr><td>
+          <label for="fullname">Full Name* </label>
+          <input type="text" name="fullname" placeholder="Enter your name"  required>
+        </td></tr></div>
+		
+        <div class="input_wrap">
+		<tr><td>
+		<label for="gender">Gender </label>
+        <select name="gender" class="dropdownlist" id="gender" >
+  <option value="Choose Gender">Choose Gender</option>
+  <option value="M">M</option>
+  <option value="F">F</option>
+  </select></td></tr></div>
+		  
+        <div class="input_wrap"><tr><td>
+		<label for="bloodgroup">Blood Group* </label>
+        <select name="bloodgroup" class="dropdownlist" id="bloodgroup" required>
+  <option value="Choose Blood Group">Choose Blood Group</option>
+  <option value="A+">A+</option>
+  <option value="A-">A-</option>
+  <option value="A1+">A1+</option>
+  <option value="A1-">A1-</option>
+  <option value="A1B+">A1B+</option>
+  <option value="A1B-">A1B-</option>
+  <option value="A2=">A2=</option>
+  <option value="A2-">A2-</option>
+  <option value="A2B+">A2B+</option>
+  <option value="A2B-">A2B-</option>
+  <option value="AB+">AB+</option>
+  <option value="AB-">AB-</option>
+  <option value="B+">B+</option>
+  <option value="B-">B-</option>
+  <option value="O+">O+</option>
+  <option value="O-">O-</option>
+  </select></td></tr></div>
+  
+  <div class="input_wrap">
+  <tr><td><label for="dob">Date of Birth* </label>
+        <input type="date" name="dob" placeholder="DD-MM-YYYY" required></td></tr></div>
+  
+        <div class="input_wrap"><tr><td><label for="mobilenumber">Mobile Number* </label>
+        <input type="text" placeholder="Enter mobile number" id="mobilenumber" name="mobilenumber"
+  pattern="[789][0-9]{9}" maxlength="10" required></td></tr></div>
+			
+	    <div class="input_wrap"><tr><td><label for="email">Email* </label>
+        <input type="text" name="email" placeholder="Enter your Email Address"  required><td></tr></div>
+			
+	<div class="input_wrap"><tr><td><label for="State">State* </label>
+        <select name="state" class="dropdownlist" id="state" required>
+    <option value="Select a State">Select a State</option>
+    <option value="Andhra Pradesh">Andhra Pradesh</option>
+    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+    <option value="Assam">Assam</option>
+    <option value="Bihar">Bihar</option>
+    <option value="Chattisgarh">Chhattisgarh</option>
+    <option value="Goa">Goa</option>
+    <option value="Gujarat">Gujarat</option>
+    <option value="Haryana">Haryana</option>
+    <option value="Himachal Pradesh">Himachal Pradesh</option>
+    <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+    <option value="Jharkhand">Jharkhand</option>
+    <option value="Karnataka">Karnataka</option>
+    <option value="Kerala">Kerala</option>
+    <option value="Madhya Pradesh">Madhya Pradesh</option>
+    <option value="Maharashtra">Maharashtra</option>
+    <option value="Manipur">Manipur</option>
+    <option value="Meghalaya">Meghalaya</option>
+    <option value="Mizoram">Mizoram</option>
+    <option value="Nagaland">Nagaland</option>
+    <option value="Odisha">Odisha</option>
+    <option value="Punjab">Punjab</option>
+    <option value="Rajasthan">Rajasthan</option>
+    <option value="Sikkim">Sikkim</option>
+    <option value="Tamil Nadu">Tamil Nadu</option>
+    <option value="Telangana">Telangana</option>
+	<option value="Tripura">Tripura</option>
+    <option value="Uttar Pradesh">Uttar Pradesh</option>
+    <option value="Uttarakhand">Uttarakhand</option>
+    <option value="West Bengal">West Bengal</option>
+  </select></td></tr></div>
+  
+  <div class="input_wrap"><tr><td><label for="city">City* </label>
+  <input type="text" name="city" placeholder="Enter your City" size="30" required></td></tr></div>
+  
+  <div class="input_wrap"><tr><td><label for="city">Username* </label>
+  <input type="text" name="username" placeholder="Enter a Username" size="30" required></td></tr></div>
+  
+  <div class="input_wrap"><tr><td><label for="password">Password* </label>
+  <input type="password" name="password" id="myInput" placeholder="Enter a Password" size="30" required>
+  <input class="checkbox" type="checkbox" onclick="myFunction()">
+  <label for="passwordshow" class="passwordl"> Show Password</label></td></tr></div>
+  <div class="input_wrap"><tr><td><button class="submit_btn" type="submit" form="DonorForm" value="Submit">Submit</button></td></tr></div>
+
+	      </tbody></table></div></form></div></div>
+    </body>
+</html>

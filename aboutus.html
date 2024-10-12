@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>About Us</title>
+		
+		<style type="text/css">
+
+		body
+        {
+		    font-family: Comic Sans MS;
+			background-color: white;
+			height: 100%;
+			width: 100%;
+			background-image: url("./Images/bro.png");
+			background-size: cover;
+			background-repeat: no-repeat;
+			margin: 0px;
+		}
+		.wrapper
+        {
+			position: relative;
+			margin: 0px;
+			padding: 5px;
+			border: 0px;
+			width: 100%;
+		}
+		.bg 
+		{
+			position: relative;
+			margin: 0px;
+			padding: 0px 0px 0px 0px;
+        }
+		.logo
+		{
+		    position: absolute;
+			color: white;
+			left:60px;
+			font-size: 18px;
+			letter-spacing: 2px;
+			margin-top: 10px;
+		}
+.nav
+{
+   overflow:hidden;
+    position:fixed;
+    list-style: none;
+    margin-top: 10px;
+	margin-left: 350px;
+}
+.header {
+position:fixed;
+  height:45px;
+  width:1635px;
+  padding: 10px 16px;
+  background: #803444;
+  color: #803444;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.sticky + .bg {
+  padding-top: 0px;
+}
+.nav ul {
+  display: inline;
+  text-align: center;
+  list-style: none;
+  padding: 10px 0px 0px 0px;
+}
+
+.nav li {
+  float: right;
+  display: inline;
+}
+
+.nav li a {
+  display: inline;
+  font-size: 18px;
+  text-align: center;
+  width:150px;
+  color: white;
+  padding: 10px 25px;
+  text-decoration: none;
+}
+
+.active{
+border-bottom: 2px solid #fff;
+}
+
+
+
+.nav .active {
+  border-bottom: 2px solid #fff;
+}
+
+footer
+{
+    color: black;
+	margin-top:2800px;
+	position:absolute;
+	margin-left:45%;
+}
+
+.heart-shape{
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  background-color: red;
+  left: 50px;
+  top: 14px;
+}
+.heart-shape:before,
+.heart-shape:after{
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  content: '';
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  background-color: red;;
+}
+.heart-shape:before{
+  bottom: 0px;
+  left: -8px;
+}
+.heart-shape:after{
+  top: -8px;
+  right: 0px;
+}
+
+
+
+.para
+{
+    position:absolute;
+	text-align: center;
+	font-size: 20px;
+	color:white;
+	margin-top:250px;
+	margin-left: 31%;
+	font-family: Papyrus;
+	font-style:italic;
+	word-spacing: 2px;
+}
+
+.para1
+{
+    position:absolute;
+	text-align: center;
+	font-size: 18px;
+	color:#7b3646;
+	margin-top:550px;
+	margin-left: 22%;
+	margin-right: 22%;
+	font-family: Times New Roman;
+	word-spacing: 1px;
+}
+
+.para2{
+position:absolute;
+background-image: url("./Images/bro.png");
+	text-align: center;
+	font-size: 18px;
+	color:white;
+	padding: 20px 500px 20px 500px;
+	margin-top:10px;
+	margin-left: 0%;
+	margin-right: 0%;
+	font-family: Times New Roman;
+	word-spacing: 1px;
+}	
+	
+a{
+	color:white;
+}
+
+.mySlides {display:static;}
+
+.bg-text {
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  border: 0px solid #f1f1f1;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  padding: 30px;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+.vl {
+  border-left: 2px solid white;
+  height: 130px;
+  position: absolute;
+  left: 30%;
+  margin-left: -3px;
+  top: 640px;
+}
+
+
+.intro1{position:relative;}
+.intro2{}
+
+.eligibility{
+position:absolute;
+margin-top:880px;
+width:100%;
+height1000px;
+color: white;
+}
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("h3").click(function(){
+    $(".eligibility .para2 .par1").toggle();
+  });
+});
+</script>
+<script>
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
+    </head>
+    <body>
+	<div class="wrapper">
+	<div class = "bg">
+	<a href="home.html">
+	<div class="header" id="myHeader">
+	<div class="heart-shape"></div>
+	<div class="logo" style="width:100px; height: 30px; font-family:Comic Sans MS;">DonorsMatter</div></a>
+              <!-- <a href="home.html"><img class="logo" src="Images/logoimage.jpg"></a> -->
+                <ul class = "nav">
+				    <li><a href="contact.html">Contact Us</a></li>
+					<li><a href="login.html">Login</a></li>
+					<li><a href="requests.html">Current Requests</a></li>
+					<li><a href="patient.html">Request Blood</a></li>
+					<li><a href="search.html">Find Blood Donor</a></li>
+					<li><a href="donor.html">Donor Register</a></li>
+					<li class="active"><a  href="aboutus.html">About us</a></li>
+                </ul>
+				</div></div><br><br>
+				<div class="intro1">
+				<hr style="position:absolute; top:20%; margin-left:90%; size:1px; width:10%; color:white;">  
+				<h1><a style="position:absolute; left:82%; margin-top:40px;">Mission</a></h1>
+				<div class="mySlides fade">
+  <img src="./Images/poster51.jpg" style="width:99%; height:300px;">
+  <div class="bg-text" style="font-size: 20px; font-family:Papyrus; width:58%; text-align:left; top:50%; left:69%;">
+ <strong>Our Mission</strong> is to fulfill every blood request in the country with a promising web portal<br> and motivated individuals who are willing to donate blood.<br>
+</div></div></div>
+
+<div class="intro2">
+<hr style=" position: absolute; top:450px; margin-right:60%; size:1px; width:10%; color:white;">  
+				<h1><a style="position:absolute; right:83%; margin-top:24px;">Vision</a></h1>
+				<div class="mySlides fade">
+  <div class="bg-text" style="font-size: 20px; font-family:Papyrus; width:80%; text-align:right; margin-top:130px; margin-left:20%;">
+ <strong>Our Vision</strong> is to reach blood sufficient India through voluntary blood donations.<br>
+</div></div></div>
+
+<div class="vl"></div>
+<div class="para">
+The main objective is to provide a Blood Donation system for Donors willing to donate,<br>
+ Patients who require Blood and can also be used by Hospitals so as to check<br>
+ if any Donor is available or if a patient is in need of Blood and can contact them...</div>
+
+<h2><a style="position: absolute; top:900px; margin-left:40%; margin-right:40%; color:#7b3646;"> Why donate blood? </a></h2>
+<hr style=" position: absolute; top:935px; margin-left:35%; margin-right:30%; width:25%;" color="#7b3646" size="1">  
+                             <div class="para1">
+                                    Our nation requires 4 Crore Units of Blood while only 40 lakh units are available,
+                                    Every two seconds someone needs Blood
+                                    There is no substitute for Human Blood. It cannot be manufactured
+                                    Blood donation is an extremely noble deed, yet there is a scarcity of regular donors across India.<br />
+                                    We focus on creating & expanding a virtual army of blood donating volunteers who could be searched and contacted by family / care givers of a patient in times of need.
+                                </div>
+				
+<h2><a style="position: absolute; top:1150px; margin-left:40%; margin-right:40%; color:#7b3646;"> Who can give blood? </a></h2>
+<hr style=" position: absolute; top:1160px; width:38%;" color="#7b3646" size="2">  
+<hr style=" position: absolute; top:1160px; margin-left:57%; width:43%;" color="#7b3646" size="2">
+ 
+<p style="position:absolute; top:1180px; margin-left:13%; margin-right:13%; text-align:center;
+font-family:Times New Roman; font-size:19px; color:#7b3646;">Most people can give blood if they are in 
+good health. There are some basic requirements one  need to fulfill in order to become a blood donor.  
+Below are some basic eligibility guidelines:<br></p>
+
+<div class="eligibility">
+<div class="para2">
+<p style="text-align:center;"> 
+<hr style=" position: absolute; top:40px; margin-left:-35%; width:49%;" color="white" size="2">
+<hr style=" position: absolute; top:40px; margin-left:20%; width:50%;" color="white" size="2"> 
+<h3>Age:</h3>
+
+You are aged between 18 and 65.<br>
+
+* In some countries national legislation permits 16–17 year-olds to donate provided that they fulfil the physical and hematological criteria required and that appropriate consent is obtained.<br>
+
+* In some countries, regular donors over the age of 65 may be accepted at the discretion of the responsible physician.
+ The upper age limit in some countries are 60.
+</p>
+<br>
+<p style="text-align:center;">
+<hr style=" position: absolute; top:295px; margin-left:-36%; width:49%;" color="white" size="2">
+<hr style=" position: absolute; top:295px; margin-left:21%; width:50%;" color="white" size="2"> 
+<h3>Weight:</h3>
+
+You weigh at least 50 kg.   <br> 
+
+* In some countries, donors of whole blood donations should weigh at least 45 kg to donate 350 ml ± 10% .
+</p>
+<br>
+<p style="text-align:center;">
+<hr style=" position: absolute; top:460px; margin-left:-35%; width:49%;" color="white" size="2">
+<hr style=" position: absolute; top:460px; margin-left:20%; width:50%;" color="white" size="2"> 
+<h3>Health:</h3>  
+
+You must be in good health at the time you donate.<br>
+
+You cannot donate if you have a cold, flu, sore throat, cold sore, stomach bug or any other infection.<br>
+
+If you have recently had a tattoo or body piercing you cannot donate for 6 months from the date of the procedure.<br>  If the body piercing was performed by a registered health professional and any inflammation has settled completely, you can donate blood after 12 hours.<br>
+
+If you have visited the dentist for a minor procedure you must wait 24 hours before donating; for major work wait a month.<br>
+
+You must not donate blood If you do not meet the minimum haemoglobin level for blood donation<br>
+
+* A test will be administered at the donation site. In many countries, a haemoglobin level of not less than 12.0 g/dl for females and not less than 13.0 g/dl for males as the threshold.
+</p>
+
+<br>
+<p style="text-align:center;">
+<hr style=" position: absolute; top:880px; margin-left:-35%; width:49%;" color="white" size="2">
+<hr style=" position: absolute; top:880px; margin-left:20%; width:50%;" color="white" size="2"> 
+<h3>Travel:</h3>
+
+Travel to areas where mosquito-borne infections are endemic, e.g. malaria, dengue and Zika virus infections, may result in a temporary deferral .<br>
+
+Many countries also implemented the policy to defer blood donors with a history of travel or 
+residence for defined cumulative exposure periods in specified countries or areas, 
+as a measure to reduce the risk of transmitting variant Creutzfeldt-Jakob Disease (vCJD) by blood transfusion.
+</p>
+<br>
+<p style="text-align:center;">
+<hr style=" position: absolute; top:1150px; margin-left:-36%; width:49%;" color="white" size="2">
+<hr style=" position: absolute; top:1150px; margin-left:22%; width:50%;" color="white" size="2"> 
+<h3>Behaviours:</h3>
+
+You must not give blood:<br>
+
+If you engaged in “at risk” sexual activity in the past 12 months<br>
+
+Individuals with behaviours below will be deferred permanently: <br>
+
+Have ever had a positive test for HIV (AIDS virus)<br>
+
+Have ever injected recreational drugs.<br>
+
+* In the national blood donor selection guidelines, there are more behavior eligibility criteria.
+ Criteria could be different in different countries.
+</p>
+<br>
+<p style="text-align:center;">
+<hr style=" position: absolute; top:1420px; margin-left:-42%; width:49%;" color="white" size="2">
+<hr style=" position: absolute; top:1420px; margin-left:27%; width:50%;" color="white" size="2"> 
+<h3>Pregnancy and breastfeeding:</h3>
+
+Following pregnancy, the deferral period should last as many months as the duration of the pregnancy.<br>
+
+It is not advisable to donate blood while breast-feeding. Following childbirth, the deferral
+ period is at least 9 months (as for pregnancy) and until 3 months after your baby
+ is significantly weaned (i.e. getting most of his/her nutrition from solids or bottle feeding).
+</p><br>	</div></div>
+	
+	
+
+            <footer>
+                <p>All rights reserved</p>
+            </footer>
+			</div>
+    </body>
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Contact Us</title>
+		<style type="text/css">
+
+		body
+        {
+		    font-family: Comic Sans MS;
+			background-image: url("./Images/poster9.jpg");
+			<!--background-color: #4A0404;-->
+			height: 100%;
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+		.wrapper
+        {
+			
+			margin: 0 auto;
+			padding: 1px;
+			border: 5px;
+		}
+		.bg 
+		{
+			position: relative;
+			margin: 0px;
+			padding: 0px 0px 0px 0px;
+        }
+		.logo
+		{
+		    position: absolute;
+			color: white;
+			left:60px;
+			font-size: 18px;
+			letter-spacing: 2px;
+			margin-top: 10px;
+		}
+.nav
+{
+    overflow:hidden;
+    position:fixed;
+    list-style: none;
+    margin-top: 0px;
+	margin-left: 350px;
+}
+
+.nav ul {
+  display: inline;
+  text-align: center;
+  list-style: none;
+}
+
+.nav li {
+  float: right;
+  display: inline;
+  padding: 10px 0px 0px 0px;
+}
+
+.nav li a {
+  display: inline;
+  font-size: 18px;
+  text-align: center;
+  width:150px;
+  color: white;
+  padding: 10px 25px;
+  text-decoration: none;
+}
+
+.nav li a:hover:not(.active) {
+  border-bottom: 2px solid grey;
+}
+
+.nav .active {
+  border-bottom: 2px solid #fff;
+}
+
+footer
+{
+    clear: both;
+    width: auto;
+    height: 40px;
+    padding: 10px;
+    text-align: center;
+    color: white;
+	margin-top:100px;
+    text-shadow: 0.1em 0.1em #333;
+}
+
+.heart-shape{
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  background-color: red;
+  left: 50px;
+  top: 14px;
+}
+.heart-shape:before,
+.heart-shape:after{
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  content: '';
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  background-color: red;;
+}
+.heart-shape:before{
+  bottom: 0px;
+  left: -8px;
+}
+.heart-shape:after{
+  top: -8px;
+  right: 0px;
+}
+
+ 
+.firstsection {
+    height: 800px;
+}
+ 
+.box-main {
+    background-color: rgb(0, 0, 0); /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.8); /* Black w/opacity/see-through */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    max-width: 100%;
+    margin: auto;
+	margin-top:150px;
+	
+    height: 400px;
+}
+ 
+.firstHalf {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+ 
+.firstHalf img {
+    display: flex;
+    border-radius: 9050px;
+}
+ 
+.text-big {
+    font-family: "Piazzolla", serif;
+    font-weight: bold;
+    font-size: 41px;
+    text-align: center;
+}
+ 
+.text-small {
+    font-family: "Sansita Swashed", cursive;
+    font-size: 18px;
+    text-align: center;
+}
+ 
+#service {
+    margin: 10px;
+    display: flex;
+}
+ 
+#service .box {
+    padding: 45px;
+    margin: 3px 6px;
+    border-radius: 28px;
+}
+ 
+#service .box img {
+    margin-top: 20px;
+    height: 100px;
+    margin: auto;
+    display: block;
+    border-radius: 200px;
+}
+ 
+#service .box p {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.centerl {
+    text-align: center;
+}
+ 
+.btn {
+    padding: 8px 20px;
+    margin: 7px 0;
+    border: 2px solid white;
+    border-radius: 8px;
+    background: none;
+    color: white;
+    cursor: pointer;
+}
+ 
+.btn-sm {
+    padding: 6px 10px;
+    vertical-align: middle;
+}
+ 
+
+</style>
+    </head>
+    <body>
+	<div class="wrapper">
+	<div class = "bg">
+	<a href="home.php">
+               <div class="heart-shape"></div>
+	<div class="logo" style="width:100px; height: 30px; font-family:Comic Sans MS;">DonorsMatter</div></a>
+                <ul class = "nav">
+				    <li><a class="active" href="contact.php">Contact Us</a></li>
+					<li><a href="login.php">Login</a></li>
+					<li><a href="requests.php">Current Requests</a></li>
+					<li><a href="patient.php">Request Blood</a></li>
+					<li><a href="search.php">Find Blood Donor</a></li>
+					<li><a href="donor.php">Donor Register</a></li>
+					<li><a href="aboutus.php">About us</a></li>
+                </ul>
+				</div>
+
+        
+        <div class="box-main">
+            <div class="firstHalf">       
+                <p class="text-big">Contact Us</p>
+ 
+                <p class="text-small">
+                    You can Contact Us if you face any problem
+                </p>
+ 
+                <br>
+                <p class="center"
+                   style="text-decoration:none;
+                          color:white; text-align:center;">
+                     You can Contact us using the below options
+                </p>
+				<p class="center"
+                   style="text-decoration:none;
+                          color:white; text-align:center;">
+                    Toll Free Number:+1800 200 300 400<br><br>
+					anshidaazeez01@gmail.com
+					
+                </p>
+ 
+            </div>
+        </div>
+   
+           <footer>
+                <p>All rights reserved</p>
+            </footer> 
+</div>
+    </body>
+</html>
